@@ -7,7 +7,7 @@ class RouterGenerico {
     this.genericoController = new GenericoController();
     this.routes();
   }
-
+// ACA IRIAN LOS METODOS DEL MIDELWARE
   // endpoints todas las rutas se manejan aca, el controlador se emcarga de hacerlo
   routes = () => {
     this.routerGenerico.get("/", this.genericoController.get);

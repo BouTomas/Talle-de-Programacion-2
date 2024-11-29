@@ -2,9 +2,10 @@ class Memory {
     constructor() {
       this.palabras = [];
     }
+    //la logica se aplica en el Servicio, aca solo agrega al array
     //   { id: 1, palabra: "Hola", timestamp: 1624450180112 }
     create = async (palabra) => {
-      //     esto es una palabra suelta
+      //     esto es una palabra suelta 
       const objetoPalabra = {};
       objetoPalabra.id = (this.palabras[this.palabras.length - 1]?.id || 0) + 1;
       objetoPalabra.palabra = palabra;

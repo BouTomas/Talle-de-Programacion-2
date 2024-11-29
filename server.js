@@ -6,7 +6,7 @@ SERVER_PORT
 class Server {
   constructor() {
     this.app = Express();
-    this.port = SERVER_PORT || 3000;
+    this.port = SERVER_PORT || 8080;
     this.persistencia = MODO_PERSISTENCIA ;
     this.routerGenerico = new RouterGenerico();
     this.configureRoutes();
