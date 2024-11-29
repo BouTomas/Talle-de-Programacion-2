@@ -1,10 +1,19 @@
 class Memory {
     constructor() {
-      this.palabras = [];
+      //this.palabras = [];
     }
+
+    create = async () => {
+      try {
+        const respuesta= await this.dao.create();
+        return respuesta
+      } catch (error) {
+        throw error;
+      }
+    };
     //la logica se aplica en el Servicio, aca solo agrega al array
     //   { id: 1, palabra: "Hola", timestamp: 1624450180112 }
-    create = async (palabra) => {
+   /* create = async (palabra) => {
       //     esto es una palabra suelta 
       const objetoPalabra = {};
       objetoPalabra.id = (this.palabras[this.palabras.length - 1]?.id || 0) + 1;
@@ -24,7 +33,7 @@ class Memory {
       //     this.palabras.push(palabra)
       // ------------------------
       return  `${palabra} agregada/o`
-    };
+    };*/
   
   get=async()=>{
        return this.palabras

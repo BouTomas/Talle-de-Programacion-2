@@ -1,5 +1,5 @@
 import express from "express";
-import RouterGenerico from "./routes/RouterGenerico.js";
+import RouterVoto from "./routes/RouterVoto.js";
 import { MODO_PERSISTENCIA, SERVER_PORT } from "./config/config.js";
 
 SERVER_PORT
@@ -8,7 +8,7 @@ class Server {
     this.app = Express();
     this.port = SERVER_PORT || 8080;
     this.persistencia = MODO_PERSISTENCIA ;
-    this.routerGenerico = new RouterGenerico();
+    this.routerVoto = new RouterVoto();
     this.configureRoutes();
   }
 
@@ -19,7 +19,7 @@ class Server {
   };
 
   configureRoutes = () => {
-    this.app.use("/api", this.routerGenerico.start());
+    this.app.use("/api", this.routerVoto.start());
   };
 
   start = async () => {
